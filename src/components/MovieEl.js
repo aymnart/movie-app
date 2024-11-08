@@ -6,6 +6,7 @@ const MovieEl = ({ movie: { title, vote_avg, overview, poster_path } }) => {
     else if (vote >= 7) return "orange";
     else return "red";
   };
+
   const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
 
   return (

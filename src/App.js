@@ -7,7 +7,7 @@ import Form from "./components/Form.js";
 
 function App() {
   const [movieData, SetMovieData] = useState(data);
-
+  const [InputName, SetInputName] = useState("");
   //function ajout movie
 
   const addMovie = (newMovie) => {
@@ -16,8 +16,8 @@ function App() {
 
   return (
     <>
-      <Header />
-      <MovieList movieData={movieData} />
+      <Header SetInputName={SetInputName} />
+      <MovieList InputName={InputName} movieData={movieData} />
       <Form addMovie={addMovie} />
     </>
   );
