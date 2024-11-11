@@ -1,0 +1,5 @@
+we tried debugging the react movie application 
+1) Use state is undefined
+fix :pass an empty string to the use state parameter => useState(") otherwise the initial value will be undefined
+
+2) we used react dev tools to check for any missing props
