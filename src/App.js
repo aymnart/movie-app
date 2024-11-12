@@ -21,7 +21,7 @@ function App() {
       <Header SetInputName={SetInputName} />
       <Routes>
         <Route
-          path="/movies"
+          path="/movieList"
           element={<MovieList InputName={InputName} movieData={movieData} />}
         />
         <Route
