@@ -8,7 +8,6 @@ const MovieList = ({ movieData, InputName }) => {
         .filter((el) =>
           el.title.toLowerCase().includes(InputName.toLowerCase().trim())
         )
-
         .map((movie, index) => (
           <MovieEl movie={movie} key={index} />
         ))}

@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import { useState } from "react";
 import MovieList from "./components/MovieList.js";
 import Form from "./components/Form.js";
+import { Routes, Route } from "react-router-dom";
+import MoviePage from "./components/MoviePage.js";
 
 function App() {
   const [movieData, SetMovieData] = useState(data);
@@ -17,8 +19,18 @@ function App() {
   return (
     <>
       <Header SetInputName={SetInputName} />
-      <MovieList InputName={InputName} movieData={movieData} />
-      <Form addMovie={addMovie} />
+      <Routes>
+        <Route
+          path="/movies"
+          element={<MovieList InputName={InputName} movieData={movieData} />}
+        />
+        <Route
+          path="/movie/*"
+          element={<MovieList InputName={InputName} movieData={movieData} />}
+        />
+        <Route path="/movie/:id" element={<MoviePage data={movieData} />} />
+        <Route path="addMovie" element={<Form addMovie={addMovie} />} />
+      </Routes>
     </>
   );
 }
